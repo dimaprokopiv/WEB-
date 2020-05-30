@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Prokopiv Arts</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Prokopiv Arts</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Biography" onclick="slowScroll('#main')">Biography</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Arts">Arts</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="Contacts">Contacts</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Qustions and answers">FAQ</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>“Everything you can imagine is real.”</h1>
+    <h3>― Pablo Picasso</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>My Biography :</h2>
+      <span></span>
+    </div>
+    <div class="text">
+      <span>Hi , My name is Vika Prokopiv and I am 17 years old . I am starting young artist from Lviv , Ukraine. You can see my artworks on this website. If you are interested in buying one of my works you can contact me below . Maybe I will add more about me someday or maybe not , who knows?))</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Arts</h2>
+    <h4></h4>
+    <div class="img">
+      <img src="C:\Users\DMaster\Desktop\WEB\IMG_4506.jpg" alt="">
+      <span>Sour sunrise</span>
+    </div>
+    <div class="img">
+      <img src="C:\Users\DMaster\Desktop\WEB\photo_2020-05-29_23-15-15.jpg" alt="">
+      <span>Toxic night</span>
+    </div>
+    <div class="img">
+      <img src="C:\Users\DMaster\Desktop\WEB\IMG_5774.jpg" alt="">
+      <span>Loveland in the night</span>
+    </div>
+    <div class="img">
+      <img src="C:\Users\DMaster\Desktop\WEB\IMG_4906.jpg" alt="">
+      <span>Loveland in the morning</span>
+    </div>
+    <div class="img">
+      <img src="C:\Users\DMaster\Desktop\WEB\photo_2020-05-29_23-34-07.jpg" alt="">
+      <span>Silent Garden</span>
+    </div>
+    <div class="img">
+      <img src="C:\Users\DMaster\Desktop\WEB\photo_2020-05-29_23-37-58.jpg" alt="">
+      <span>Toxic forest</span>
+    </div>
+  </div>
+
+
+
+
+
+  <div id="contacts">
+    <center><h5>Contact me here</h5></center>
+    <form id="form_input">
+      <label for="Name">Name <span>*</span></label><br>
+      <input type="text" placeholder="Input name" name="name" id="name"><br>
+      <label for="email">Email <span>*</span></label><br>
+			<input type="email" placeholder="Input email" name="email" id="email"><br>
+			<label for="message">Message <span>*</span></label><br>
+			<textarea placeholder="Input your message" name="message" id="message"></textarea><br>
+			<div id="mess_send" class="btn">Send</div>
+    </form>
+  </div>
+
+  <div id="faq">
+    <div>
+      <span class="title">Payment</span><br>
+      <span class="heading">How does payment system work?</span>
+      <p>You pay only after delivery through courier.</p>
+      <span class="heading">Which currency do you use ?</span>
+      <p>Mostly USD ,EUR and UAH . Text us for more details.</p>
+
+    </div>
+    <div>
+      <span class="title">Informatiion</span><br>
+      <span class="heading">Do paints come with frames?</span>
+      <p>Curently they don't, but we will add this feature later .</p>
+      <span class="heading">What are sizes of paints ?</span>
+      <p>They are different for every work .Contact us and we will tell you all information about it.</p>
+
+    </div>
+    <div>
+      <span class="title">Shipping</span><br>
+      <span class="heading">Which postal service do you use ?</span>
+      <p>Currently we are working with NovaPoshta.</p>
+      <span class="heading">Do you include shipping into price?</span>
+      <p>No ,we don't. We pay for the shipping.</p>
+
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
